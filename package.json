@@ -1,0 +1,21 @@
+{
+  "name": "sidestall",
+  "version": "1.0.0",
+  "description": "This folder is pre-configured for [Firebase Hosting](https://firebase.google.com/docs/hosting) following the official [Get started with Firebase Hosting](https://firebase.google.com/docs/hosting/quickstart) and [Configure Hosting behavior](https://firebase.google.com/docs/hosting/full-config) specifications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slimlinecloud/sidestall.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/slimlinecloud/sidestall/issues"
+  },
+  "homepage": "https://github.com/slimlinecloud/sidestall#readme"
+}

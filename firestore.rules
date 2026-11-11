@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /accounts/{uid} {
+      allow read: if true;
+      allow create, update: if request.resource.data.size() < 25;
+    }
+    match /stalls/{stallId} {
+      allow read: if true;
+      allow create, update: if request.resource.data.size() < 60;
+      allow delete: if request.auth != null && resource.data.ownerUid == request.auth.uid;
+    }
+    match /streams/{streamId} {
+      allow read: if true;
+      allow create, update: if request.resource.data.size() < 60;
+      allow delete: if true;
+
+      match /rtc_peers/{viewerId} {
+        allow read, write: if true;
+      }
+    }
+    match /shorts/{shortId} {
+      allow read: if true;
+      allow create, update: if request.resource.data.size() < 50;
+      allow delete: if request.auth != null && resource.data.ownerUid == request.auth.uid;
+    }
+    match /promos/{promoId} {
+      allow read, create, update, delete: if true;
+    }
+    match /upcoming/{eventId} {
+      allow read, create, update, delete: if true;
+    }
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create, update: if request.resource.data.size() < 30;
+      allow delete: if request.auth != null && resource.data.authorUid == request.auth.uid;
+    }
+    match /collabs/{collabId} {
+      allow read, create, update: if true;
+    }
+    match /orders/{orderId} {
+      allow read, create, update: if request.resource == null || request.resource.data.size() < 60;
+    }
+    match /crm_contacts/{contactId} {
+      allow read, create, update, delete: if true;
+    }
+    match /platform_settings/owner_vault {
+      allow read: if true;
+      allow create: if true;
+      allow update: if !('claimed' in resource.data)
+                    || resource.data.claimed == false
+                    || request.resource.data.secretHash == resource.data.secretHash
+                    || (request.auth != null && resource.data.ownerUid == request.auth.uid);
+    }
+  }
+}

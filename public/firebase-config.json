@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "result": {
+    "fileName": "firebase-js-config.json",
+    "fileContents": "{\n  \"projectId\": \"sidestall\",\n  \"appId\": \"1:452677426203:web:6c9be2a14d83220a35acbe\",\n  \"storageBucket\": \"sidestall.firebasestorage.app\",\n  \"apiKey\": \"AIzaSyAidWq_USKilsl9XdN8wvxxr0XTYgn6W-4\",\n  \"authDomain\": \"sidestall.firebaseapp.com\",\n  \"messagingSenderId\": \"452677426203\",\n  \"measurementId\": \"G-WZZFYT4MJ9\",\n  \"projectNumber\": \"452677426203\",\n  \"version\": \"2\"\n}",
+    "sdkConfig": {
+      "projectId": "sidestall",
+      "appId": "1:452677426203:web:6c9be2a14d83220a35acbe",
+      "storageBucket": "sidestall.firebasestorage.app",
+      "apiKey": "AIzaSyAidWq_USKilsl9XdN8wvxxr0XTYgn6W-4",
+      "authDomain": "sidestall.firebaseapp.com",
+      "messagingSenderId": "452677426203",
+      "measurementId": "G-WZZFYT4MJ9",
+      "projectNumber": "452677426203",
+      "version": "2"
+    }
+  }
+}
